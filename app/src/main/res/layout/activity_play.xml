@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PlayActivity_">
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/playbackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.8"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/statsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/statsbtn" />
+
+                <ImageView
+                    android:id="@+id/pickupBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/pickupbtn" />
+
+                <ImageView
+                    android:id="@+id/endTurnBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/endturnbtn" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:text="15"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    app:srcCompat="@drawable/die1" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    app:srcCompat="@drawable/die1" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/rollbtn" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile1"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple1"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/right_layout">
+
+                    <ImageView
+                        android:id="@+id/tile2"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple2"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile3"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple3"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/left_layout">
+
+                    <ImageView
+                        android:id="@+id/tile4"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple4"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile5"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple5"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/right_layout">
+
+                    <ImageView
+                        android:id="@+id/tile6"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple6"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile7"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple7"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/left_layout">
+
+                    <ImageView
+                        android:id="@+id/tile8"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple8"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile9"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple9"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/right_layout">
+
+                    <ImageView
+                        android:id="@+id/tile10"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple10"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile11"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple11"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/left_layout">
+
+                    <ImageView
+                        android:id="@+id/tile12"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple12"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile13"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple13"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/right_layout">
+
+                    <ImageView
+                        android:id="@+id/tile14"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple14"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile15"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple15"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/left_layout">
+
+                    <ImageView
+                        android:id="@+id/tile16"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple16"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile17"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple17"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/right_layout">
+
+                    <ImageView
+                        android:id="@+id/tile18"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple18"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile19"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple19"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/left_layout">
+
+                    <ImageView
+                        android:id="@+id/tile20"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple20"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile21"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple21"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/right_layout">
+
+                    <ImageView
+                        android:id="@+id/tile22"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple22"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile23"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple23"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/left_layout">
+
+                    <ImageView
+                        android:id="@+id/tile24"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple24"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile25"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple25"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/right_layout">
+
+                    <ImageView
+                        android:id="@+id/tile26"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple26"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile27"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple27"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/left_layout">
+
+                    <ImageView
+                        android:id="@+id/tile28"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple28"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile29"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple29"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/right_layout">
+
+                    <ImageView
+                        android:id="@+id/tile30"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple30"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/center_layout">
+
+                    <ImageView
+                        android:id="@+id/tile31"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple31"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/left_layout">
+
+                    <ImageView
+                        android:id="@+id/tile32"
+                        style="@style/deep_tile"
+                        app:srcCompat="@drawable/deep1back" />
+
+                    <ImageView
+                        android:id="@+id/tilemeeple32"
+                        style="@style/meeple_style" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>
